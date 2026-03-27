@@ -25,36 +25,22 @@
             margin: 20px;
         }
         .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 40px 20px 20px;
-            text-align: center;
-        }
-        .profile-pic {
-            width: 100px;
-            height: 100px;
-            background-color: #e0e0e0;
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            border: 4px solid white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            color: #666;
-            /* 실제 사용 시 아래 background-image 속성에 사진 링크를 넣으세요 */
-            /* background-image: url('photo.jpg'); */
+            /* 배경 사진(bg-photo.jpg)을 꽉 차게 넣고, 하얀 글씨가 잘 보이도록 어두운 막을 씌웠습니다 */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('photo.jpg');
             background-size: cover;
             background-position: center;
+            color: white;
+            padding: 80px 20px 40px; 
+            text-align: center;
         }
         .name {
             margin: 0;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
         }
         .job-title {
-            margin: 5px 0 0;
-            font-size: 14px;
+            margin: 8px 0 0;
+            font-size: 15px;
             opacity: 0.9;
         }
         .content {
@@ -92,15 +78,16 @@
         }
         .social-links {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
             margin-top: 20px;
             padding-top: 20px;
             border-top: 1px solid #f0f0f0;
         }
         .btn {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 20px;
             background-color: #1e3c72;
             color: white;
             text-decoration: none;
@@ -108,9 +95,18 @@
             font-size: 14px;
             font-weight: 600;
             transition: background-color 0.3s;
+            flex: 1 1 40%;
+            text-align: center;
+            box-sizing: border-box;
         }
         .btn:hover {
             background-color: #152a51;
+        }
+        /* 회사 전용 버튼 (가로로 100% 꽉 차게) */
+        .btn.company-btn {
+            background-color: #2a5298; 
+            flex: 1 1 100%; 
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -118,8 +114,7 @@
 
 <div class="card-container">
     <div class="header">
-        <div class="profile-pic"></div>
-        <h1 class="name">동엽</h1>
+        <h1 class="name">신동엽 선임매니저</h1>
         <p class="job-title">선재하이테크 | 영업부</p>
     </div>
     
@@ -133,13 +128,13 @@
 
         <h2 class="section-title">About Me</h2>
         <p class="intro-text">
-            안녕하세요! 선재하이테크 영업부에서 신동엽선임매니저 입니다.<br><br>
-            
-        </p>
+            안녕하세요! 선재하이테크 영업부 신동엽선임매니저입니다.<br><br>
+                   </p>
 
         <div class="social-links">
             <a href="tel:010-0000-0000" class="btn">전화걸기</a>
             <a href="mailto:your.email@example.com" class="btn">이메일 보내기</a>
+            <a href="https://sunstat.com/" target="_blank" class="btn company-btn">선재하이테크 제품소개</a>
         </div>
     </div>
 </div>
