@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta property="og:title" content="선재하이테크 기술영업부 - 동엽">
+    <meta property="og:title" content="선재하이테크 영업부 - 신동엽 선임매니저">
     <meta property="og:description" content="고객의 기술적 고민을 해결하는 최적의 솔루션을 제안합니다.">
-    <meta property="og:image" content="photo.jpg">
-    <meta property="og:url" content="https://내아이디.github.io/저장소이름/"> <meta property="og:type" content="website">
+    <meta property="og:image" content="bg-photo.jpg">
+    <meta property="og:url" content="https://yuby9477.github.io/profile/"> <meta property="og:type" content="website">
 
     <title>동엽 - 디지털 명함</title>
     <style>
@@ -28,27 +28,24 @@
         /* 1. 상단 커버 이미지 (배경사진) */
         .cover-section {
             height: 260px;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%), url('photo.jpg');
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%), url('bg-photo.jpg');
             background-size: cover;
             background-position: center;
             position: relative;
         }
 
-        /* 2. 메인 프로필 카드 (✨슬라이스 핵심 UI: 커버 사진 위로 겹쳐 올라오는 디자인) */
+        /* 2. 메인 프로필 카드 */
         .profile-card {
             background-color: #ffffff;
             border-radius: 24px;
-            margin: -50px 20px 0; /* 위로 50px 끌어올려 겹치게 만듦 */
+            margin: -50px 20px 0; 
             padding: 32px 24px 24px;
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
             position: relative;
             z-index: 2;
             text-align: center;
         }
-        .tags {
-            margin-bottom: 16px;
-        }
-        /* 기술영업 전문가 느낌의 태그 */
+        .tags { margin-bottom: 16px; }
         .tag {
             display: inline-block;
             background-color: rgba(30, 60, 114, 0.06);
@@ -63,7 +60,7 @@
         .name { margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.5px; }
         .job-title { margin: 8px 0 20px; font-size: 15px; color: #666; font-weight: 500; }
         
-        /* 3. 연락처 퀵 버튼 (원형 아이콘 스타일) */
+        /* 3. 연락처 퀵 버튼 */
         .action-buttons {
             display: flex; justify-content: center; gap: 16px;
             padding-top: 20px;
@@ -99,11 +96,26 @@
         .intro-text { font-size: 15px; line-height: 1.6; color: #333; margin: 0; }
         
         .contact-row {
-            display: flex; align-items: center; margin-bottom: 16px;
+            display: flex; align-items: flex-start; margin-bottom: 16px;
         }
         .contact-row:last-child { margin-bottom: 0; }
-        .contact-label { width: 80px; font-size: 13px; color: #888; font-weight: 500; }
-        .contact-value { font-size: 15px; color: #222; font-weight: 600; }
+        .contact-label { width: 80px; font-size: 13px; color: #888; font-weight: 500; margin-top: 2px; }
+        .contact-value { font-size: 15px; color: #222; font-weight: 600; flex: 1; line-height: 1.4; }
+        
+        .phone-wrapper { display: flex; align-items: center; gap: 8px; }
+        
+        /* 복사 버튼 미니 스타일 */
+        .copy-badge {
+            background-color: #eef2f6;
+            color: #1e3c72;
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background-color 0.2s;
+        }
+        .copy-badge:active { background-color: #dbe4f0; }
 
         /* 5. 링크 버튼 카드 */
         .link-card {
@@ -120,7 +132,7 @@
         .link-icon { font-size: 18px; margin-right: 10px; }
         .link-arrow { color: #ccc; font-weight: 300; }
 
-        /* 6. 하단 고정 플로팅 버튼 (그라데이션 강조) */
+        /* 6. 하단 고정 플로팅 버튼 */
         .floating-bar {
             position: fixed; bottom: 0; left: 0; width: 100%;
             background: linear-gradient(to top, rgba(244,246,249,1) 60%, rgba(244,246,249,0));
@@ -148,7 +160,7 @@
     <div class="profile-card">
         <div class="tags">
             <span class="tag">TECH SALES</span>
-            <span class="tag">정전기 솔루션 컨설팅</span>
+            <span class="tag">정전기 솔루션 </span>
             <span class="tag">B2B 영업</span>
         </div>
         <h1 class="name">신동엽 선임매니저</h1>
@@ -157,7 +169,7 @@
         <div class="action-buttons">
             <a href="tel:010-5436-9034" class="action-btn">
                 <div class="icon-circle">📞</div>
-                <div class="action-name">연락처복사</div>
+                <div class="action-name">전화</div>
             </a>
             <a href="#" onclick="copyEmail(event)" class="action-btn">
                 <div class="icon-circle">📧</div>
@@ -173,7 +185,7 @@
     <div class="info-block">
         <h2 class="block-title">About Me</h2>
         <p class="intro-text">
-           단순한 납품을 넘어 고객사의 기술적 고민을 깊이 이해하고 최적의 솔루션을 제안합니다.  항상 최고의 컨디션으로 소통하겠습니다.
+            단순한 납품을 넘어 고객사의 기술적 고민을 깊이 이해하고 최적의 솔루션을 제안합니다.  항상 최고의 컨디션으로 소통하겠습니다.
         </p>
     </div>
 
@@ -181,7 +193,10 @@
         <h2 class="block-title">Contact</h2>
         <div class="contact-row">
             <div class="contact-label">Mobile</div>
-            <div class="contact-value">010-5436-9034</div>
+            <div class="contact-value phone-wrapper">
+                010-5436-9034 
+                <span class="copy-badge" onclick="copyPhone(event)">복사</span>
+            </div>
         </div>
         <div class="contact-row">
             <div class="contact-label">Email</div>
@@ -194,22 +209,34 @@
     </div>
 
     <a href="https://sunstat.com/" target="_blank" class="link-card">
-        <div><span class="link-icon">🌐</span> 선재하이테크 제품</div>
+        <div><span class="link-icon">🌐</span> 선재하이테크 홈페이지</div>
         <span class="link-arrow">〉</span>
     </a>
 
 </div>
 
 <div class="floating-bar">
-    <button class="floating-btn" onclick="location.href='tel:010-0000-0000'">연락처 저장 (전화걸기)</button>
+    <button class="floating-btn" onclick="location.href='tel:010-5436-9034'">전화걸기</button>
 </div>
 
 <script>
+    // 이메일 복사 기능
     function copyEmail(event) {
         event.preventDefault(); 
         const email = "sdy251101@sunstat.com";
         navigator.clipboard.writeText(email).then(() => {
             alert("이메일 주소가 복사되었습니다! 🎉\n" + email);
+        }).catch(err => {
+            alert("복사에 실패했습니다. 브라우저 설정을 확인해주세요.");
+        });
+    }
+
+    // 연락처 복사 기능
+    function copyPhone(event) {
+        event.preventDefault(); 
+        const phone = "010-5436-9034"; 
+        navigator.clipboard.writeText(phone).then(() => {
+            alert("연락처가 복사되었습니다! 🎉\n" + phone);
         }).catch(err => {
             alert("복사에 실패했습니다. 브라우저 설정을 확인해주세요.");
         });
